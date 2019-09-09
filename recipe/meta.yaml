@@ -1,4 +1,4 @@
-{% set version = "0.8.0" %}
+{% set version = '1.1.0' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,12 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googleAuthR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googleAuthR/googleAuthR_{{ version }}.tar.gz
-  sha256: 0d8dd1149d53ff6155493914693af92b3aa367d656e104834a4e0fef522f7c64
+  sha256: 7180d14fcf1c8c7ff625a8fc367d66cb818d36118f91a56c2b751c35a451f8a5
 
 build:
-  noarch: generic
   merge_build_host: True  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -23,23 +22,25 @@ build:
 
 requirements:
   build:
-
+    - {{posix}}zip               # [win]
   host:
     - r-base
-    - r-r6 >=2.1.0
     - r-assertthat >=0.2.0
     - r-digest
-    - r-httr >=1.3.1
-    - r-jsonlite >=0.9.16
+    - r-gargle >=0.3.1
+    - r-httr >=1.4.0
+    - r-jsonlite >=1.6
     - r-memoise >=1.1.0
+    - r-rlang
   run:
     - r-base
-    - r-r6 >=2.1.0
     - r-assertthat >=0.2.0
     - r-digest
-    - r-httr >=1.3.1
-    - r-jsonlite >=0.9.16
+    - r-gargle >=0.3.1
+    - r-httr >=1.4.0
+    - r-jsonlite >=1.6
     - r-memoise >=1.1.0
+    - r-rlang
 
 test:
   commands:
@@ -52,6 +53,9 @@ about:
   summary: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/>
     easily, with auto-refresh and Shiny compatibility.
   license_family: MIT
+  license_file:
+    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - LICENSE
 
 extra:
   recipe-maintainers:
@@ -59,22 +63,22 @@ extra:
 
 # Package: googleAuthR
 # Type: Package
-# Version: 0.7.0
+# Version: 1.1.0
 # Title: Authenticate and Create Google APIs
 # Description: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/> easily, with auto-refresh and Shiny compatibility.
 # Authors@R: c(person("Mark", "Edmondson",email = "m@sunholo.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8434-3881")), person("Jennifer", "Bryan",email="jenny@stat.ubc.ca", role = "ctb"), person("Johann", "deBoer", email="johanndeboer@gmail.com", role = "ctb"), person("Neal", "Richardson", email="neal.p.richardson@gmail.com", role = "ctb"), person("David","Kulp", email="dkulp@cs.umass.edu", role = "ctb"), person("Joe","Cheng", email = "joe@rstudio.com", role = "ctb"))
 # URL: http://code.markedmondson.me/googleAuthR/
 # BugReports: https://github.com/MarkEdmondson1234/googleAuthR/issues
 # Depends: R (>= 3.3.0)
-# Imports: assertthat (>= 0.2.0), digest, httr (>= 1.3.1), jsonlite (>= 0.9.16), R6 (>= 2.1.0), memoise (>= 1.1.0), utils
-# Suggests: bigQueryR, covr, devtools (>= 1.12.0), formatR (>= 1.4), googleAnalyticsR, httptest, knitr, miniUI (>= 0.1.1), rmarkdown, roxygen2 (>= 5.0.0), shiny (>= 0.13.2), testthat
+# Imports: assertthat (>= 0.2.0), digest, gargle (>= 0.3.1), httr (>= 1.4.0), jsonlite (>= 1.6), memoise (>= 1.1.0), rlang, utils
+# Suggests: bigQueryR, covr, devtools (>= 1.12.0), formatR (>= 1.4), googleAnalyticsR, knitr, miniUI (>= 0.1.1), rmarkdown, roxygen2 (>= 5.0.0), shiny (>= 0.13.2), testthat, usethis (>= 1.5.1)
 # License: MIT + file LICENSE
 # LazyData: true
 # VignetteBuilder: knitr
-# RoxygenNote: 6.0.1
+# RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2018-11-16 20:14:03 UTC; mark
+# Packaged: 2019-09-06 19:01:21 UTC; mark
 # Author: Mark Edmondson [aut, cre] (<https://orcid.org/0000-0002-8434-3881>), Jennifer Bryan [ctb], Johann deBoer [ctb], Neal Richardson [ctb], David Kulp [ctb], Joe Cheng [ctb]
 # Maintainer: Mark Edmondson <m@sunholo.com>
 # Repository: CRAN
-# Date/Publication: 2018-11-16 21:00:03 UTC
+# Date/Publication: 2019-09-07 16:00:02 UTC
