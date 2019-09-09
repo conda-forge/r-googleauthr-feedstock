@@ -1,4 +1,4 @@
-{% set version = '1.1.0' %}
+{% set version = '1.1.1' %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googleAuthR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googleAuthR/googleAuthR_{{ version }}.tar.gz
-  sha256: 7180d14fcf1c8c7ff625a8fc367d66cb818d36118f91a56c2b751c35a451f8a5
+  sha256: 03a3958dd706a7b8c4de2467b371889adf35f8f337728f827d65608684357a14
 
 build:
   merge_build_host: True  # [win]
@@ -63,7 +63,7 @@ extra:
 
 # Package: googleAuthR
 # Type: Package
-# Version: 1.1.0
+# Version: 1.1.1
 # Title: Authenticate and Create Google APIs
 # Description: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/> easily, with auto-refresh and Shiny compatibility.
 # Authors@R: c(person("Mark", "Edmondson",email = "m@sunholo.com", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-8434-3881")), person("Jennifer", "Bryan",email="jenny@stat.ubc.ca", role = "ctb"), person("Johann", "deBoer", email="johanndeboer@gmail.com", role = "ctb"), person("Neal", "Richardson", email="neal.p.richardson@gmail.com", role = "ctb"), person("David","Kulp", email="dkulp@cs.umass.edu", role = "ctb"), person("Joe","Cheng", email = "joe@rstudio.com", role = "ctb"))
@@ -77,8 +77,8 @@ extra:
 # VignetteBuilder: knitr
 # RoxygenNote: 6.1.1
 # NeedsCompilation: no
-# Packaged: 2019-09-06 19:01:21 UTC; mark
+# Packaged: 2019-09-08 21:54:49 UTC; mark
 # Author: Mark Edmondson [aut, cre] (<https://orcid.org/0000-0002-8434-3881>), Jennifer Bryan [ctb], Johann deBoer [ctb], Neal Richardson [ctb], David Kulp [ctb], Joe Cheng [ctb]
 # Maintainer: Mark Edmondson <m@sunholo.com>
 # Repository: CRAN
-# Date/Publication: 2019-09-07 16:00:02 UTC
+# Date/Publication: 2019-09-09 08:00:02 UTC
