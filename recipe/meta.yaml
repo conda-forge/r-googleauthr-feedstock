@@ -1,4 +1,4 @@
-{% set version = '1.1.1' %}
+{% set version = "1.2.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googleAuthR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googleAuthR/googleAuthR_{{ version }}.tar.gz
-  sha256: 03a3958dd706a7b8c4de2467b371889adf35f8f337728f827d65608684357a14
+  sha256: 4b8032fef5a1f370c2f98f43c05da34f3098477cda14205895957a2955396682
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -22,7 +22,7 @@ build:
 
 requirements:
   build:
-    - {{posix}}zip               # [win]
+    - {{ posix }}zip               # [win]
   host:
     - r-base
     - r-assertthat >=0.2.0
@@ -50,11 +50,10 @@ test:
 about:
   home: http://code.markedmondson.me/googleAuthR/
   license: MIT
-  summary: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/>
-    easily, with auto-refresh and Shiny compatibility.
+  summary: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/> easily, with auto-refresh and Shiny compatibility.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
