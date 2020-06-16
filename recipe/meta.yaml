@@ -26,8 +26,9 @@ requirements:
   host:
     - r-base
     - r-assertthat >=0.2.0
+    - r-cli >=2.0.2
     - r-digest
-    - r-gargle >=0.3.1
+    - r-gargle >=0.4.0
     - r-httr >=1.4.0
     - r-jsonlite >=1.6
     - r-memoise >=1.1.0
@@ -35,8 +36,9 @@ requirements:
   run:
     - r-base
     - r-assertthat >=0.2.0
+    - r-cli >=2.0.2
     - r-digest
-    - r-gargle >=0.3.1
+    - r-gargle >=0.4.0
     - r-httr >=1.4.0
     - r-jsonlite >=1.6
     - r-memoise >=1.1.0
