@@ -1,4 +1,4 @@
-{% set version = "1.3.1" %}
+{% set version = "1.4.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/googleAuthR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/googleAuthR/googleAuthR_{{ version }}.tar.gz
-  sha256: 25b57aaaa8a940db5510b01c7b54d4215ff8742542a3fc1b335ee35f7e48a556
+  sha256: dda889de94091c13ad7beb5c2ad5b88491b09b3547b186410c2a22acf75d9800
 
 build:
   merge_build_host: true  # [win]
