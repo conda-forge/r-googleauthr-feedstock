@@ -1,11 +1,11 @@
-About r-googleauthr
-===================
+About r-googleauthr-feedstock
+=============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-googleauthr-feedstock/blob/main/LICENSE.txt)
 
 Home: http://code.markedmondson.me/googleAuthR/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-googleauthr-feedstock/blob/main/LICENSE.txt)
 
 Summary: Create R functions that interact with OAuth2 Google APIs  <https://developers.google.com/apis-explorer/> easily, with auto-refresh and Shiny compatibility.
 
